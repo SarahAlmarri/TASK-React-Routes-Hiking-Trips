@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import TripsList from "./components/TripsList";
+import TripDetail from "./components/TripDetail";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/tripList",
+        path: "/trip/list",
         element: <TripsList />,
+      },
+      {
+        path: "/trip/detail/:tripId",
+        element: <TripDetail />,
       },
     ],
   },
